@@ -8,7 +8,40 @@ Fluid templates (`.fluid.html`, `.fluid.xml`, …) in Zed.
 
 Tree-sitter grammar for highlighting, outline, brackets, and indents (HTML / XML / JSON / Text). Snippets for common ViewHelpers. A small Node helper LSP — downloaded from this repo’s GitHub release as `fluid-lsp.tar.gz` — for ViewHelper completion (tag + inline), hover, schema checks, and live `fluid:analyze` when a TYPO3 project exposes it (Core on 14+, [fluid-companion](https://github.com/s2b/fluid-companion) on 12/13; DDEV-aware).
 
-Classic `Resources/Private/**/*.html` is not auto-detected (Zed extensions only bind suffixes). Use the globs in [examples/recommended-settings.json](examples/recommended-settings.json).
+<br>
+
+## Older templates without `.fluid.html`
+
+Zed extensions can only bind fixed suffixes (e.g. `.fluid.html`). Classic TYPO3 paths like `Resources/Private/Templates/**/*.html` are **not** detected automatically.
+
+Workaround — put this in your Zed settings (project or user), or copy from [examples/recommended-settings.json](examples/recommended-settings.json):
+
+```json
+{
+  "file_types": {
+    "Fluid HTML": [
+      "**/Resources/Private/Templates/**/*.html",
+      "**/Resources/Private/Layouts/**/*.html",
+      "**/Resources/Private/Partials/**/*.html",
+      "**/Resources/Private/Components/**/*.html",
+      "**/Resources/Private/PageView/**/*.html",
+      "**/ContentBlocks/**/templates/**/*.html",
+      "*.fluid.html",
+      "*.fluid.htm"
+    ],
+    "Fluid Text": [
+      "**/Resources/Private/Templates/**/*.txt",
+      "**/Resources/Private/Layouts/**/*.txt",
+      "**/Resources/Private/Partials/**/*.txt",
+      "**/Resources/Private/Components/**/*.txt",
+      "**/Resources/Private/PageView/**/*.txt",
+      "*.fluid.txt"
+    ]
+  }
+}
+```
+
+Adjust the globs if your layout differs. Files matching these patterns get Fluid highlighting, snippets, and the helper LSP.
 
 <br>
 
