@@ -14,7 +14,7 @@ snippets = [
 
 [grammars.fluid]
 repository = "https://github.com/onza/typo3-fluid"
-rev = "dead6bb26d6360e3ccd7645b653f116abc49c4bb"
+rev = "b8ded404be8b437eefa3e1e5fdfcb2b742b92a4f"
 
 [language_servers.fluid-lsp]
 name = "Fluid"
