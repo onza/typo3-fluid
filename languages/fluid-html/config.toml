@@ -1,0 +1,30 @@
+name = "Fluid HTML"
+grammar = "fluid"
+# Suffixes only — path globs for Resources/Private/**/*.html: see examples/recommended-settings.json
+path_suffixes = ["fluid.html", "fluid.htm"]
+first_line_pattern = "(?i)(xmlns:f\\s*=|data-namespace-typo3-fluid|\\{namespace\\s|<f:[a-zA-Z])"
+language_servers = [
+  "fluid-lsp",
+  "vscode-html-language-server",
+  "emmet-language-server",
+]
+block_comment = ["{*", "*}"]
+tab_size = 2
+autoclose_before = "}];>"
+brackets = [
+  { start = "{", end = "}", close = true, newline = false },
+  { start = "[", end = "]", close = true, newline = false },
+  { start = "(", end = ")", close = true, newline = false },
+  { start = "\"", end = "\"", close = true, newline = false },
+  { start = "'", end = "'", close = true, newline = false },
+  { start = "<", end = ">", close = false, newline = true },
+]
+wrap_characters = { start_prefix = "<", start_suffix = ">", end_prefix = "</", end_suffix = ">" }
+
+[jsx_tag_auto_close]
+open_tag_node_name = "start_tag"
+close_tag_node_name = "end_tag"
+jsx_element_node_name = "element"
+tag_name_node_name = "tag_name"
+erroneous_close_tag_node_name = "erroneous_end_tag"
+erroneous_close_tag_name_node_name = "erroneous_end_tag_name"

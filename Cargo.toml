@@ -1,0 +1,16 @@
+[package]
+name = "typo3-fluid"
+version = "0.1.3"
+edition = "2021"
+publish = false
+license = "MIT"
+description = "Zed language extension for TYPO3 Fluid templates"
+repository = "https://github.com/onza/typo3-fluid"
+authors = ["Martin Farkas <info@martinfarkas.com>"]
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.7.0"

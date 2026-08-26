@@ -1,0 +1,32 @@
+{
+  "file_types": {
+    "Fluid HTML": [
+      "**/Resources/Private/Templates/**/*.html",
+      "**/Resources/Private/Layouts/**/*.html",
+      "**/Resources/Private/Partials/**/*.html",
+      "**/Resources/Private/Components/**/*.html",
+      "**/Resources/Private/PageView/**/*.html",
+      "**/ContentBlocks/**/templates/**/*.html",
+      "*.fluid.html",
+      "*.fluid.htm"
+    ],
+    "Fluid Text": [
+      "**/Resources/Private/Templates/**/*.txt",
+      "**/Resources/Private/Layouts/**/*.txt",
+      "**/Resources/Private/Partials/**/*.txt",
+      "**/Resources/Private/Components/**/*.txt",
+      "**/Resources/Private/PageView/**/*.txt",
+      "*.fluid.txt"
+    ]
+  },
+  "languages": {
+    "Fluid HTML": {
+      "language_servers": [
+        "fluid-lsp",
+        "vscode-html-language-server",
+        "emmet-language-server",
+        "..."
+      ]
+    }
+  }
+}

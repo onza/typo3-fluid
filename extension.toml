@@ -1,0 +1,27 @@
+id = "fluid"
+name = "TYPO3 Fluid"
+version = "0.1.3"
+schema_version = 1
+authors = ["Martin Farkas <info@martinfarkas.com>"]
+description = "Fluid templates for Zed (Tree-sitter, completions, analyze, schema)"
+repository = "https://github.com/onza/typo3-fluid"
+snippets = [
+    "./snippets/fluid html.json",
+    "./snippets/fluid xml.json",
+    "./snippets/fluid json.json",
+    "./snippets/fluid text.json",
+]
+
+[grammars.fluid]
+repository = "https://github.com/onza/typo3-fluid"
+rev = "dead6bb26d6360e3ccd7645b653f116abc49c4bb"
+
+[language_servers.fluid-lsp]
+name = "Fluid"
+languages = ["Fluid HTML", "Fluid XML", "Fluid JSON", "Fluid Text"]
+
+[language_servers.fluid-lsp.language_ids]
+"Fluid HTML" = "fluid"
+"Fluid XML" = "fluid"
+"Fluid JSON" = "fluid"
+"Fluid Text" = "fluid"
